@@ -12,7 +12,10 @@ Languages to Use
 * Kotlin
 * Swift
 * Dart
+* OCaml
 * Elixir
+* Idris
+* Coq
 * Ruby
 * Brainfuck
 * Minecraft Redstone
