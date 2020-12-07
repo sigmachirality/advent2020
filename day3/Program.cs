@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace day3
@@ -27,6 +27,29 @@ namespace day3
             }
             Console.WriteLine(count);
 
+            // Part 2
+            int subcount;
+            foreach(var increment in new[] {1, 5, 7}) {
+                subcount = 0;
+                for (int x = 0; x < lines.Count; x++) {
+                    int y = x * increment;
+                    if (lines[x][y % lines[0].Length] == '#') {
+                        subcount++;
+                    }
+                }
+                count *= subcount;
+            }
+
+            subcount = 0;
+            for (int x = 0; x < lines.Count; x+=2) {
+                int y = x / 2;
+                if (lines[x][y % lines[0].Length] == '#') {
+                    subcount++;
+                }
+            }
+            count *= subcount;
+
+            Console.WriteLine(count);
         }
     }
 }
