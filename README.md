@@ -1,7 +1,7 @@
 # aoc2020
 
-Instead of learning a new language, I'm doing each day in a different language I already know first, then learning new languages.
-By the end of aoc2020, I'll have refreshed myself on a few languages and tried out a few new ones!
+I'm doing each day in a different language.
+Hopefully by the end of aoc2020, I'll have refreshed myself on some languages and tried out a bunch of new ones!
 
 Languages to Use
 * Malbolge 
