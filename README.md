@@ -3,7 +3,7 @@
 I'm doing each day in a different language.
 Hopefully by the end of aoc2020, I'll have refreshed myself on some languages and tried out a bunch of new ones!
 
-Languages to Use
+## TODO: Languages to Use
 * Malbolge 
 * Haskell
 * Common Lisp
@@ -21,6 +21,8 @@ Languages to Use
 * Minecraft Redstone
 * Powerpoint
 * Factorio Trains
+
+## Languages Used So Far
 
 | Day | Language   |
 | --- | --------   |
