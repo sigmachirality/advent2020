@@ -12,6 +12,8 @@ Languages to Use
 * Kotlin
 * Swift
 * Dart
+* Elixir
+* Ruby
 * Brainfuck
 * Minecraft Redstone
 * Powerpoint
