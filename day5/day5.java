@@ -22,6 +22,13 @@ public class day5 {
             }
             System.out.println(highest);
 
+            // Part 2
+            for (int i : ids) {
+                if (ids.contains(i + 2) && !ids.contains(i + 1)) {
+                    System.out.println(i + 1);
+                }
+            }
+
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
