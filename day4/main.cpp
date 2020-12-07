@@ -39,5 +39,78 @@ int main(int argc, char *argv[])
     std::cout << count << std::endl;
 
 
+    // Part 2
+    count = 0;
+    std::set<QString> ecl = {"amb", "blu", "brn", "gry", "grn", "hzl", "oth"};
+    for (auto passport : passports) {
+        if (passport.find("byr") != passport.end()) {
+            if (passport["byr"].length() != 4) continue;
+            int val = passport["byr"].toInt();
+            if (val < 1920 || val > 2002) continue;
+        } else {
+            continue;
+        }
+
+        if (passport.find("iyr") != passport.end()) {
+            if (passport["iyr"].trimmed().length() != 4) continue;
+            int val = passport["iyr"].toInt();
+            if (val < 2010 || val > 2020) continue;
+        } else {
+            continue;
+        }
+
+        if (passport.find("eyr") != passport.end()) {
+            if (passport["eyr"].trimmed().length() != 4) continue;
+            int val = passport["eyr"].toInt();
+            if (val < 2020 || val > 2030) continue;
+        } else {
+            continue;
+        }
+
+        if (passport.find("hgt") != passport.end()) {
+            if (passport["hgt"].endsWith("cm")) {
+                int val = passport["hgt"].left(passport["hgt"].trimmed().length() - 2).toInt();
+                if (val < 150 || val > 193) continue;
+            } else if (passport["hgt"].endsWith("in")) {
+                int val = passport["hgt"].left(passport["hgt"].trimmed().length() - 2).toInt();
+                if (val < 59 || val > 76) continue;
+            } else {
+                continue;
+            }
+        } else {
+            continue;
+        }
+
+        if (passport.find("hcl") != passport.end()) {
+            if (!passport["hcl"].startsWith("#") || !(passport["hcl"].length() == 7)) continue;
+            bool is_valid = true;
+            for (auto i : passport["hcl"].right(6)) {
+                if (!i.isDigit() && !(i.toLatin1() >= QChar('a').toLatin1() && i.toLatin1() <= QChar('f').toLatin1())) is_valid = false;
+            }
+            if (!is_valid) continue;
+        } else {
+            continue;
+        }
+
+        if (passport.find("ecl") != passport.end()) {
+            if (ecl.find(passport["ecl"]) == ecl.end()) continue;
+        } else {
+            continue;
+        }
+
+        if (passport.find("pid") != passport.end()) {
+            if (!(passport["pid"].length() == 9)) continue;
+            bool is_valid = true;
+            for (auto i : passport["pid"].trimmed()) {
+                if (!i.isDigit()) is_valid = false;
+            }
+            if (!is_valid) continue;
+        } else {
+            continue;
+        }
+
+        count++;
+    }
+
     std::cout << count << std::endl;
 }
