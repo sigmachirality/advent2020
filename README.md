@@ -9,7 +9,6 @@ Hopefully by the end of aoc2020, I'll have refreshed myself on some languages an
 * Common Lisp
 * Rust
 * Go
-* Kotlin
 * Swift
 * Dart
 * OCaml
@@ -31,4 +30,4 @@ Hopefully by the end of aoc2020, I'll have refreshed myself on some languages an
 | 3   | C#         |
 | 4   | Qt C++     |
 | 5   | Java 8     |
-| 6   | TBD        |
+| 6   | Kotlin     |
